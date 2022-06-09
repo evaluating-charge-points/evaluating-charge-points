@@ -4,7 +4,7 @@ We start by exporting two datasets:
   1. Charge_points(dfpoints), dataset containing the information about charge
 points in Denmark. The dataset contains these rows: Charge point ID, Name, Visibility, Charge count, total kWh, Address, City, Created at, latitude and longitude.
   2. Charges(dfcharge) dataset contains these columns: Charge_ID, State, Vehicle, kwh limit, Charge_point_id, kwh, price, currency, created, failed_at, stopped_by_user, start_after, team_price_group, soc, cable_plugged_in_at, soc_source, last_stop_attempt_at, socs, soc_start.
-  3. 
+
 To match the two datasets we use Charge_point_id column, we can assign every charge to a dedicated charge point using **dfcharge['charge point id'].isin(dfpoints['id']).value_counts()**
 
 Now we have 28196 out of 28919 rows of charges matching to charge points and we assign it to dfcharge.
